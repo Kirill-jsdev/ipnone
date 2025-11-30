@@ -3,15 +3,15 @@
 import { useState } from "react";
 
 const models = [
-  { name: "iPhone 17 Pro Max 256GB", price: "2000 000 000 ₽" },
-  { name: "iPhone 17 Pro Max 512GB", price: "144 990 ₽" },
-  { name: "iPhone 17 Pro Max 1TB", price: "164 990 ₽" },
-  { name: "iPhone 17 Pro 128GB", price: "109 990 ₽" },
-  { name: "iPhone 17 Pro 256GB", price: "119 990 ₽" },
-  { name: "iPhone 17 Pro 512GB", price: "139 990 ₽" },
-  { name: "iPhone 17 128GB", price: "89 990 ₽" },
-  { name: "iPhone 17 256GB", price: "99 990 ₽" },
-  { name: "iPhone 17 512GB", price: "119 990 ₽" },
+  { name: "iPhone 17 Pro Max 256GB", price: "42 000 000 сум" },
+  { name: "iPhone 17 Pro Max 512GB", price: "46 000 000 сум" },
+  { name: "iPhone 17 Pro Max 1TB", price: "52 000 000 сум" },
+  { name: "iPhone 17 Pro 128GB", price: "32 000 000 сум" },
+  { name: "iPhone 17 Pro 256GB", price: "35 000 000 сум" },
+  { name: "iPhone 17 Pro 512GB", price: "40 000 000 сум" },
+  { name: "iPhone 17 128GB", price: "22 000 000 сум" },
+  { name: "iPhone 17 256GB", price: "25 000 000 сум" },
+  { name: "iPhone 17 512GB", price: "30 000 000 сум" },
 ];
 
 export default function Home() {
@@ -33,7 +33,7 @@ export default function Home() {
           <div className="actions">
             <div className="dropdown-container">
               <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
-                Узнать цену
+                Выберите модель
                 <svg className={`dropdown-icon ${isOpen ? "rotate" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -58,11 +58,7 @@ export default function Home() {
             </div>
 
             <div className="price-container">
-              {selectedPrice ? (
-                <div className="price-display">{selectedPrice}</div>
-              ) : (
-                <div className="price-placeholder">Выберите модель</div>
-              )}
+              {selectedPrice ? <div className="price-display">{selectedPrice}</div> : <div className="price-placeholder">Цена</div>}
             </div>
 
             <a href="tel:+79999999999" className="buy-button">
