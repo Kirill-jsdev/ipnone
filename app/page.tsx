@@ -28,6 +28,8 @@ export default function Home() {
 
           <p className="subtitle">Все комплектации и цвета доступны</p>
 
+          <p className="subtitle-secondary">Нажать кнопку &quot;Купить&quot; ≈ сделать свой последний звонок не с айфона</p>
+
           <div className="actions">
             <div className="dropdown-container">
               <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
