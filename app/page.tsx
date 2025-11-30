@@ -1,6 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const themes = [
+  { id: "natural-titanium", name: "Natural Titanium" },
+  { id: "blue-titanium", name: "Blue Titanium" },
+  { id: "white-titanium", name: "White Titanium" },
+  { id: "black-titanium", name: "Black Titanium" },
+  { id: "desert-titanium", name: "Desert Titanium" },
+  { id: "rose-gold", name: "Rose Gold" },
+];
 
 const models = [
   { name: "iPhone 17 Pro Max 256GB", price: "42 000 000 сум" },
@@ -17,11 +26,21 @@ const models = [
 export default function Home() {
   const [selectedModel, setSelectedModel] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [currentTheme] = useState(() => {
+    // Initialize with random theme
+    return themes[Math.floor(Math.random() * themes.length)];
+  });
 
   const selectedPrice = models.find((m) => m.name === selectedModel)?.price || "";
 
+  useEffect(() => {
+    // Apply theme to document
+    document.documentElement.setAttribute("data-theme", currentTheme.id);
+  }, [currentTheme]);
+
   return (
     <div className="page-container">
+      <div className="theme-indicator">{currentTheme.name}</div>
       <main className="content">
         <div className="glass-card text-center max-w-2xl mx-auto px-6">
           <h1 className="title">iPhone 17</h1>
