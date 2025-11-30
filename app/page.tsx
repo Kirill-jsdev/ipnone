@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react";
 
 const themes = [
-  { id: "natural-titanium", name: "Natural Titanium" },
-  { id: "blue-titanium", name: "Blue Titanium" },
-  { id: "white-titanium", name: "White Titanium" },
-  { id: "black-titanium", name: "Black Titanium" },
-  { id: "desert-titanium", name: "Desert Titanium" },
-  { id: "rose-gold", name: "Rose Gold" },
+  { id: "lavender", name: "Lavender" },
+  { id: "sage", name: "Sage" },
+  { id: "mist-blue", name: "Mist Blue" },
+  { id: "white", name: "White" },
+  { id: "black", name: "Black" },
+  { id: "cosmic-orange", name: "Cosmic Orange" },
+  { id: "deep-blue", name: "Deep Blue" },
+  { id: "silver", name: "Silver" },
 ];
 
 const models = [
