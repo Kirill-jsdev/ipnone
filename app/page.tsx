@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const models = [
-  { name: "iPhone 17 Pro Max 256GB", price: "129 990 ₽" },
+  { name: "iPhone 17 Pro Max 256GB", price: "2000 000 000 ₽" },
   { name: "iPhone 17 Pro Max 512GB", price: "144 990 ₽" },
   { name: "iPhone 17 Pro Max 1TB", price: "164 990 ₽" },
   { name: "iPhone 17 Pro 128GB", price: "109 990 ₽" },
