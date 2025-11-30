@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="page-container">
       <main className="content">
-        <div className="text-center max-w-2xl mx-auto px-6">
+        <div className="glass-card text-center max-w-2xl mx-auto px-6">
           <h1 className="title">iPhone 17</h1>
 
           <p className="subtitle">Все комплектации и цвета доступны</p>
@@ -55,7 +55,13 @@ export default function Home() {
               )}
             </div>
 
-            {selectedPrice && <div className="price-display">{selectedPrice}</div>}
+            <div className="price-container">
+              {selectedPrice ? (
+                <div className="price-display">{selectedPrice}</div>
+              ) : (
+                <div className="price-placeholder">Выберите модель</div>
+              )}
+            </div>
 
             <a href="tel:+79999999999" className="buy-button">
               Купить
